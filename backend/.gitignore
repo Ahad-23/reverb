@@ -1,33 +1,81 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# .gitignore for both Backend (Spring Boot) and Frontend (React)
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# IDE-specific files
+/.idea/
+/.vscode/
+/*.iml
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# Node modules (React Frontend)
+node_modules/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
+# Build directories for React and Spring Boot
+/build/
 /dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+/target/
 
-### VS Code ###
-.vscode/
+# Logs
+*.log
+*.log.*
+
+# Dependency directories
+/target/
+/node_modules/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Java-specific (for Spring Boot)
+*.class
+*.jar
+*.war
+*.ear
+*.db
+
+# Spring Boot specific
+/.mvn/
+/.mvnw
+/mvnw
+/target/
+
+# Sensitive files (example: .env, properties files with credentials)
+# For both Backend and Frontend
+.env
+.env.local
+.env.*.local
+/src/main/resources/application.properties
+/src/main/resources/application.yml
+
+# Maven wrapper and Gradle wrapper
+.gradle
+.gradle-wrapper
+.gradle-wrapper.properties
+
+# Authentication tokens/credentials files for backend
+src/main/resources/*_credentials.yml
+src/main/resources/secret_key.json
+
+# Frontend-specific React files
+npm-debug.log
+yarn-error.log
+
+# SASS/LESS/CSS build artifacts
+*.css.map
+*.scss.map
+
+# IDE and system-specific files
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Authentication-specific files
+/auth0_config.json
+/src/main/resources/auth0_config.json
+
+# Database dumps or other files that are not needed in source control
+*.sql
+*.sqlite
+
+# Additional config files
+/.env.*  # If you're using multiple env files like .env.production, .env.development
